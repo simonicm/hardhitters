@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.msimonic.worldofworkout.CustomWorkout"
+    android:background="#324851"
+    >
+
+    <CheckBox android:id="@+id/pushups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push Ups"
+        android:onClick="onCheckboxClicked"
+        android:textColor="#FF8C00"
+        />
+    <CheckBox android:id="@+id/pullups"
+        android:textColor="#FF8C00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pull Ups"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@+id/pushups"
+        android:layout_alignParentStart="true" />
+    <CheckBox android:id="@+id/squats"
+        android:textColor="#FF8C00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Squats"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@+id/pullups"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/next_custom"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="NEXT"
+        android:textColor="#324851"
+        app:backgroundTint="#FF8C00"
+        android:layout_gravity="bottom|center"
+        android:textSize="40dp"
+        android:layout_marginBottom="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/pullups" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/rounds_plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textColor="#FF8C00"
+        android:background="#FFFFFF"
+        android:layout_gravity="center_vertical|center"
+        android:textSize="40dp"
+        android:layout_alignBottom="@+id/rounds_minus"
+        android:layout_toEndOf="@+id/rounds_count"
+        android:layout_alignTop="@+id/rounds_minus" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/rounds_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textColor="#FF8C00"
+        android:background="#FFFFFF"
+        android:layout_gravity="center_vertical|center"
+        android:textSize="40dp"
+        android:layout_below="@+id/rounds"
+        android:layout_alignStart="@+id/rest"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:id="@+id/rounds_count"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/rounds_plus"
+        android:layout_toEndOf="@+id/rounds_minus"
+        android:text=""
+        android:textColor="#FF8C00"
+        android:textSize="40dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/rounds"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="ROUNDS"
+        android:textSize="45dp"
+        android:textColor="#FF8C00"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/squats"
+        android:layout_alignStart="@+id/rounds_minus"
+        android:layout_alignEnd="@+id/rounds_plus" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/rest_plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textColor="#FF8C00"
+        android:background="#FFFFFF"
+        android:layout_gravity="center_vertical|center"
+        android:textSize="40dp"
+        android:layout_above="@+id/next_custom"
+        android:layout_alignEnd="@+id/next_custom"
+        android:layout_marginBottom="28dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/rest_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textColor="#FF8C00"
+        android:background="#FFFFFF"
+        android:layout_gravity="center_vertical|center"
+        android:textSize="40dp"
+        android:layout_alignBaseline="@+id/rest_plus"
+        android:layout_alignBottom="@+id/rest_plus"
+        android:layout_alignStart="@+id/next_custom" />
+
+    <TextView
+        android:id="@+id/rest"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="REST"
+        android:textSize="45dp"
+        android:textColor="#FF8C00"
+        android:textAlignment="center"
+        android:layout_above="@+id/rest_plus"
+        android:layout_alignEnd="@+id/rest_plus"
+        android:layout_marginBottom="14dp"
+        android:layout_alignStart="@+id/rest_minus" />
+
+    <TextView
+        android:id="@+id/rest_count"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:textSize="40dp"
+        android:textColor="#FF8C00"
+        android:textAlignment="center"
+        android:layout_below="@+id/rest"
+        android:layout_toEndOf="@+id/rest_minus" />
+</RelativeLayout>

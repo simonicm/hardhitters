@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.msimonic.worldofworkout.Workout"
+    android:background="#324851"
+>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercises"
+        android:layout_marginBottom="46px"
+        android:lines="1"
+        android:textSize="72px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textIsSelectable="false"
+        android:textColor="#FF8C00"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="visible"
+        android:id="@+id/timer"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:lines="1"
+        android:textSize="96px"
+        android:textColor="#FF8C00"
+        android:textIsSelectable="false"
+    />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/done"
+        tools:visibility="invisible"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="DONE"
+        android:textColor="#324851"
+        app:backgroundTint="#FF8C00"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="30dp"
+        android:layout_marginBottom="20dp"
+    />
+
+</RelativeLayout>
